@@ -1,0 +1,13 @@
+#about-section {
+	padding: 2rem 1rem;
+}
+
+.about-us-list {
+	list-style: none;
+	padding: 0 0 0 0;
+}
+
+.about-us-checkmark {
+	color: #71bc42;
+	margin-right: 2rem;
+}
