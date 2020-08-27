@@ -7,7 +7,7 @@ const Contact = () => {
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-12 text-center">
-						<h2 class="section-title mb-3">Contact Us</h2>
+						<h2 class="section-title h1 text-primary mb-3">Contact Us</h2>
 					</div>
 				</div>
 				<div class="row mb-5">
@@ -20,13 +20,17 @@ const Contact = () => {
 					<div class="col-md-4 text-center">
 						<p class="mb-4">
 							<FaPhone className="d-block h4 text-primary mx-auto" />
-							<a href="tel:+1-540-339-7563">+1 540 339 7563</a>
+							<a href="tel:+1-540-339-7563" className="text-dark">
+								+1 540 339 7563
+							</a>
 						</p>
 					</div>
 					<div class="col-md-4 text-center">
 						<p class="mb-0">
 							<FaEnvelope className="d-block h4 text-primary mx-auto" />
-							<a href="mailto:nitinkumar@rockitpad.com">nitinkumar@rockitpad.com</a>
+							<a href="mailto:nitinkumar@rockitpad.com" className="text-dark">
+								nitinkumar@rockitpad.com
+							</a>
 						</p>
 					</div>
 				</div>

@@ -90,3 +90,10 @@ html {
 		opacity: 0;
 	}
 }
+
+.get-in-touch {
+	position: absolute;
+	bottom: 15rem;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
