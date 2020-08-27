@@ -14,11 +14,11 @@ const AboutUs = () => {
 					</div>
 				</div>
 				<div className="row about-us-content">
-					<div className="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-						<img src={aboutUsImage} alt="about us" className="img-fluid" />
+					<div className="col-lg-6 mb-5 px-auto" data-aos="fade-up" data-aos-delay="">
+						<img src={aboutUsImage} alt="about us" className="img-fluid mx-auto" />
 					</div>
 					<div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-						<div className="mb-4">
+						<div className="mb-4 px-auto">
 							<h3 className="h3 mb-4 text-black">Elevate Your Brand</h3>
 							<p className="lead">
 								RockIT combines deep technical expertise with creative design to provide a truly unique
@@ -26,7 +26,7 @@ const AboutUs = () => {
 							</p>
 						</div>
 
-						<div className="mb-4 lead">
+						<div className="mb-4 lead px-auto">
 							<ul className="about-us-list">
 								<li>
 									<ImCheckmark className="about-us-checkmark" />Custom Web Pages and SEO
