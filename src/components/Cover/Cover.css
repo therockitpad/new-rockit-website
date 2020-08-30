@@ -93,7 +93,8 @@ html {
 
 .get-in-touch {
 	position: absolute;
-	bottom: 15rem;
+	bottom: 25%;
 	left: 50%;
+	border-radius: 5rem;
 	transform: translate(-50%, 0);
 }

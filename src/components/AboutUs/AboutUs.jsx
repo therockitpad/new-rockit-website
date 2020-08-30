@@ -6,18 +6,18 @@ import './AboutUs.css';
 
 const AboutUs = () => {
 	return (
-		<section id="about-section">
+		<section id="about-section" data-aos="fade-up" data-aos-delay="100">
 			<div className="container">
 				<div className="row mb-5">
-					<div className="col-12 text-center" data-aos="fade">
+					<div className="col-12 text-center">
 						<h2 className="mb-3 h1 text-primary">About Us</h2>
 					</div>
 				</div>
 				<div className="row about-us-content">
-					<div className="col-lg-6 mb-5 px-auto" data-aos="fade-up" data-aos-delay="">
+					<div className="col-lg-6 mb-5 px-auto">
 						<img src={aboutUsImage} alt="about us" className="img-fluid mx-auto" />
 					</div>
-					<div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+					<div className="col-lg-5 ml-auto">
 						<div className="mb-4 px-auto">
 							<h3 className="h3 mb-4 text-black">Elevate Your Brand</h3>
 							<p className="lead">

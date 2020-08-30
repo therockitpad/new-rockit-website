@@ -1,32 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { FaMap, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
+	const [ contactForm, setContactForm ] = useState({
+		name: '',
+		email: '',
+		subject: '',
+		message: ''
+	});
+
+	const handleChange = (event) => {
+		setContactForm({ ...contactForm, [event.target.name]: event.target.value });
+	};
+
 	return (
-		<section class="site-section bg-light" id="contact-section" data-aos="fade">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-12 text-center">
-						<h2 class="section-title h1 text-primary mb-3">Contact Us</h2>
+		<section className="site-section bg-light" id="contact-section" data-aos="fade-up" data-aos-delay="100">
+			<div className="container">
+				<div className="row mb-5">
+					<div className="col-12 text-center">
+						<h2 className="section-title h1 text-primary mb-3">Contact Us</h2>
 					</div>
 				</div>
-				<div class="row mb-5">
-					<div class="col-md-4 text-center">
-						<p class="mb-4 text-center">
+				<div className="row mb-5">
+					<div className="col-md-4 text-center">
+						<p className="mb-4 text-center">
 							<FaMap className="d-block h4 text-primary mx-auto" />
 							<span>Herndon, VA</span>
 						</p>
 					</div>
-					<div class="col-md-4 text-center">
-						<p class="mb-4">
+					<div className="col-md-4 text-center">
+						<p className="mb-4">
 							<FaPhone className="d-block h4 text-primary mx-auto" />
 							<a href="tel:+1-540-339-7563" className="text-dark">
 								+1 540 339 7563
 							</a>
 						</p>
 					</div>
-					<div class="col-md-4 text-center">
-						<p class="mb-0">
+					<div className="col-md-4 text-center">
+						<p className="mb-0">
 							<FaEnvelope className="d-block h4 text-primary mx-auto" />
 							<a href="mailto:nitinkumar@rockitpad.com" className="text-dark">
 								nitinkumar@rockitpad.com
@@ -34,14 +46,14 @@ const Contact = () => {
 						</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 mb-5">
-						<form class="p-5 bg-white" nethod="post" action="contact.php" enctype="multipart/form-data">
-							<h2 class="h4 text-black mb-5">Contact Form</h2>
+				<div className="row">
+					<div className="col-md-12 mb-5">
+						<form className="p-5 bg-white" nethod="post" action="contact.php" encType="multipart/form-data">
+							<h2 className="h4 text-black mb-5">Contact Form</h2>
 
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label class="text-black" for="fname">
+							<div className="row form-group">
+								<div className="col-md-12">
+									<label className="text-black" htmlFor="fname">
 										Full Name
 									</label>
 									<input
@@ -49,23 +61,33 @@ const Contact = () => {
 										type="text"
 										id="name"
 										placeholder="Full Name..."
-										class="form-control"
+										className="form-control"
+										value={contactForm['name']}
+										onChange={handleChange}
 									/>
 								</div>
 							</div>
 
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label name="email" class="text-black" for="email">
+							<div className="row form-group">
+								<div className="col-md-12">
+									<label name="email" className="text-black" htmlFor="email">
 										Email
 									</label>
-									<input type="email" id="email" placeholder="Your e-mail..." class="form-control" />
+									<input
+										type="email"
+										name="email"
+										id="email"
+										placeholder="Your e-mail..."
+										className="form-control"
+										value={contactForm['email']}
+										onChange={handleChange}
+									/>
 								</div>
 							</div>
 
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label class="text-black" for="subject">
+							<div className="row form-group">
+								<div className="col-md-12">
+									<label className="text-black" htmlFor="subject">
 										Subject
 									</label>
 									<input
@@ -73,14 +95,16 @@ const Contact = () => {
 										type="subject"
 										placeholder="Subject..."
 										id="subject"
-										class="form-control"
+										className="form-control"
+										value={contactForm['subject']}
+										onChange={handleChange}
 									/>
 								</div>
 							</div>
 
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label class="text-black" for="message">
+							<div className="row form-group">
+								<div className="col-md-12">
+									<label className="text-black" htmlFor="message">
 										Message
 									</label>
 									<textarea
@@ -88,17 +112,19 @@ const Contact = () => {
 										id="message"
 										cols="30"
 										rows="7"
-										class="form-control"
+										className="form-control"
 										placeholder="Write your message..."
+										value={contactForm['message']}
+										onChange={handleChange}
 									/>
 								</div>
 							</div>
-							<div class="row form-group">
-								<div class="col-md-2">
+							<div className="row form-group">
+								<div className="col-md-2">
 									<input
 										type="submit"
 										value="Send Message"
-										class="btn btn-primary btn-md text-white"
+										className="btn btn-primary btn-md text-white"
 									/>
 								</div>
 							</div>

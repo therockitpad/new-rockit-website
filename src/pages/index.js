@@ -7,6 +7,7 @@ import AboutUs from '../components/AboutUs/AboutUs';
 import Cover from '../components/Cover/Cover';
 import Footer from '../components/Footer/Footer';
 import Contact from '../components/Contact/Contact';
+import Services from '../components/Services/Services';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
@@ -22,6 +23,7 @@ export default function Home() {
 			<Navbar />
 			<Cover />
 			<AboutUs />
+			<Services />
 			<Contact />
 			<Footer />
 		</div>
