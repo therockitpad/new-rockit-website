@@ -2,9 +2,29 @@
 	padding: 2rem 1rem;
 }
 
-/* .services-carousel {
-} */
+.services-carousel {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: none;
+	align-content: center;
+	justify-content: center;
+}
 
-.services-carousel-image {
-	padding: 0 10%;
+.services-carousel-text .carousel-inner {
+	width: 100%;
+	height: 100%;
+}
+
+.services-carousel-text-item {
+	margin: 0 auto;
+	padding: 0 1rem;
+	/* transition: all 500ms ease-in-out; */
+}
+
+@media (max-width: 1000px) {
+	.services-carousel {
+		grid-template-columns: none;
+		grid-template-rows: auto auto;
+		gap: 2rem 0;
+	}
 }

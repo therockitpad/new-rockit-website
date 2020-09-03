@@ -15,6 +15,7 @@ const Services = () => {
 			<div className="row mb-5">
 				<div className="col-12 text-center">
 					<h2 className="mb-3 h1 text-primary">Services</h2>
+					<h4 className="lead">See what RockIT can do for you!</h4>
 				</div>
 			</div>
 			<Container className="services-carousel">
@@ -25,17 +26,17 @@ const Services = () => {
 						</Carousel.Item>
 					))}
 				</Carousel>
-				<Carousel className="servies-carousel-half">
-					<Carousel.Item>
-						<h2 className="section-title mb-3">Custom Websites</h2>
+				<Carousel className="services-carousel-text-item">
+					<Carousel.Item className="services-carousel-text-item">
+						<h2 className="section-title mb-3 text-primary h2">Custom Websites</h2>
 						<p className="lead">Design and build a unique website.</p>
 						<p>
 							We can create a website from scratch, or improve an existing website. We can also work with
 							templates and sites such as wordpress and wix.
 						</p>
 					</Carousel.Item>
-					<Carousel.Item>
-						<h2 className="section-title mb-3">Social Media Management</h2>
+					<Carousel.Item className="services-carousel-text-item">
+						<h2 className="section-title mb-3 text-primary h2">Social Media Management</h2>
 						<p className="lead">Expand your outreach through social media.</p>
 						<p>
 							We can manage multiple social media accounts, handling everything from account setup to
@@ -43,8 +44,8 @@ const Services = () => {
 							on a monthly basis.
 						</p>
 					</Carousel.Item>
-					<Carousel.Item>
-						<h2 className="section-title mb-3">Digital Marketing</h2>
+					<Carousel.Item className="services-carousel-text-item">
+						<h2 className="section-title mb-3 text-primary h2">Digital Marketing</h2>
 						<p className="lead">
 							Vast array of tools and knowledge to help you achieve your marketing needs.
 						</p>
@@ -54,8 +55,8 @@ const Services = () => {
 							eye of your audience, and will increase your brand engagement.{' '}
 						</p>
 					</Carousel.Item>
-					<Carousel.Item>
-						<h2 className="section-title mb-3">Graphic Design</h2>
+					<Carousel.Item className="services-carousel-text-item">
+						<h2 className="section-title mb-3 text-primary h2">Graphic Design</h2>
 						<p className="lead">Eye catching designs that will engage your audience.</p>
 						<p>
 							Custom images and videos help to captivate your audience and convey meaning. We can
