@@ -15,9 +15,9 @@ const Contact = () => {
 	};
 
 	return (
-		<section className="site-section bg-light" id="contact-section" data-aos="fade-up" data-aos-delay="100">
+		<section className="bg-light" id="contact-section" data-aos="fade-up" data-aos-delay="100">
 			<div className="container">
-				<div className="row mb-5">
+				<div className="row my-5 pt-3">
 					<div className="col-12 text-center">
 						<h2 className="section-title h1 text-primary mb-3">Contact Us</h2>
 					</div>

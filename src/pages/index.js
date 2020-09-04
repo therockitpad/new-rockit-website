@@ -15,15 +15,24 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 export default function Home() {
+	const homeRef = React.useRef(null);
+	const aboutUsRef = React.useRef(null);
+	const servicesRef = React.useRef(null);
+	const contactRef = React.useRef(null);
+
 	return (
 		<div>
 			<Helmet>
 				<title>RockIT | Digital Brand Management</title>
 			</Helmet>
-			<Navbar />
+			<Navbar refs={[ homeRef, aboutUsRef, servicesRef, contactRef ]} />
+			<div ref={homeRef} />
 			<Cover />
+			<div ref={aboutUsRef} />
 			<AboutUs />
+			<div ref={servicesRef} />
 			<Services />
+			<div ref={contactRef} />
 			<Contact />
 			<Footer />
 		</div>
