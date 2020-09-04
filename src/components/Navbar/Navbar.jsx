@@ -24,7 +24,6 @@ const Navbar = ({ refs }) => {
 
 	const toElement = (ref) => {
 		if (!ref) return;
-		console.log(ref);
 		const element = ref.current.getBoundingClientRect().top + window.scrollY;
 
 		window.scroll({
@@ -45,22 +44,22 @@ const Navbar = ({ refs }) => {
 						<div id="navbarSupportedContent" className="collapse navbar-collapse">
 							<ul className="navbar-nav ml-auto">
 								<li className="nav-item active">
-									<a href="#void" onClick={() => toElement(homeRef)} className="nav-link px-4">
+									<a href="#" onClick={() => toElement(homeRef)} className="nav-link px-4">
 										Home
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="#void" onClick={() => toElement(aboutUsRef)} className="nav-link px-4">
+									<a href="#" onClick={() => toElement(aboutUsRef)} className="nav-link px-4">
 										About Us
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="#void" onClick={() => toElement(servicesRef)} className="nav-link px-4">
+									<a href="#" onClick={() => toElement(servicesRef)} className="nav-link px-4">
 										Services
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="#void" onClick={() => toElement(contactRef)} className="nav-link px-4">
+									<a href="#" onClick={() => toElement(contactRef)} className="nav-link px-4">
 										Contact
 									</a>
 								</li>
@@ -78,22 +77,22 @@ const Navbar = ({ refs }) => {
 						<FaTimesCircle className="h3" onClick={() => setSidebar(false)} />
 					</li>
 					<li>
-						<a href="#void" onClick={() => toElement(homeRef)} className="h3">
+						<a href="#" onClick={() => toElement(homeRef)} className="h3">
 							Home
 						</a>
 					</li>
 					<li>
-						<a href="#void" onClick={() => toElement(aboutUsRef)} className="h3">
+						<a href="#" onClick={() => toElement(aboutUsRef)} className="h3">
 							About Us
 						</a>
 					</li>
 					<li>
-						<a href="#void" onClick={() => toElement(servicesRef)} className="h3">
+						<a href="#" onClick={() => toElement(servicesRef)} className="h3">
 							Services
 						</a>
 					</li>
 					<li>
-						<a href="#void" onClick={() => toElement(contactRef)} className="h3">
+						<a href="#" onClick={() => toElement(contactRef)} className="h3">
 							Contact
 						</a>
 					</li>

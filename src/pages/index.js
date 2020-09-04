@@ -27,7 +27,7 @@ export default function Home() {
 			</Helmet>
 			<Navbar refs={[ homeRef, aboutUsRef, servicesRef, contactRef ]} />
 			<div ref={homeRef} />
-			<Cover />
+			<Cover contactRef={contactRef} />
 			<div ref={aboutUsRef} />
 			<AboutUs />
 			<div ref={servicesRef} />
