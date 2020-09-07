@@ -1,105 +1,160 @@
 import React, { useState, useEffect } from 'react';
 import { FaTimesCircle, FaBars } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 import './Navbar.css';
 
-const Navbar = ({ refs }) => {
-	const [ scrollPosition, setScrollPosition ] = useState(0);
-	const [ sidebar, setSidebar ] = useState(false);
+const Navbar = () => {
+    const [ scrollPosition, setScrollPosition ] = useState(0);
+    const [ sidebar, setSidebar ] = useState(false);
 
-	const handleScroll = () => {
-		const position = window.pageYOffset;
-		setScrollPosition(position);
-	};
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
 
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { passive: true });
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
-	const [ homeRef, aboutUsRef, servicesRef, contactRef ] = refs;
+    return (
+        <div>
+            <header className="header">
+                <nav
+                    className={`navbar navbar-expand-lg fixed-top ${scrollPosition >
+                    50
+                        ? 'active'
+                        : ''}`}
+                >
+                    <div className="container">
+                        <a href="#home-section" className="navbar-brand px-3">
+                            RockIT
+                        </a>
 
-	const toElement = (ref) => {
-		if (!ref) return;
-		const element = ref.current.getBoundingClientRect().top + window.scrollY;
-
-		window.scroll({
-			top: element,
-			behavior: 'smooth'
-		});
-	};
-
-	return (
-		<div>
-			<header className="header">
-				<nav className={`navbar navbar-expand-lg fixed-top ${scrollPosition > 50 ? 'active' : ''}`}>
-					<div className="container">
-						<a href="#home-section" className="navbar-brand px-3">
-							RockIT
-						</a>
-
-						<div id="navbarSupportedContent" className="collapse navbar-collapse">
-							<ul className="navbar-nav ml-auto">
-								<li className="nav-item active">
-									<a href="#" onClick={() => toElement(homeRef)} className="nav-link px-4">
-										Home
-									</a>
-								</li>
-								<li className="nav-item">
-									<a href="#" onClick={() => toElement(aboutUsRef)} className="nav-link px-4">
-										About Us
-									</a>
-								</li>
-								<li className="nav-item">
-									<a href="#" onClick={() => toElement(servicesRef)} className="nav-link px-4">
-										Services
-									</a>
-								</li>
-								<li className="nav-item">
-									<a href="#" onClick={() => toElement(contactRef)} className="nav-link px-4">
-										Contact
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div id="menu-open" onClick={() => setSidebar(true)}>
-							<FaBars className={`${scrollPosition > 50 ? 'active' : ''} menu-open-logo h3`} />
-						</div>
-					</div>
-				</nav>
-			</header>
-			<div id={`collapsable-navbar`} className={`${sidebar ? 'open' : ''}`}>
-				<ul>
-					<li>
-						<FaTimesCircle className="h3" onClick={() => setSidebar(false)} />
-					</li>
-					<li>
-						<a href="#" onClick={() => toElement(homeRef)} className="h3">
-							Home
-						</a>
-					</li>
-					<li>
-						<a href="#" onClick={() => toElement(aboutUsRef)} className="h3">
-							About Us
-						</a>
-					</li>
-					<li>
-						<a href="#" onClick={() => toElement(servicesRef)} className="h3">
-							Services
-						</a>
-					</li>
-					<li>
-						<a href="#" onClick={() => toElement(contactRef)} className="h3">
-							Contact
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	);
+                        <div
+                            id="navbarSupportedContent"
+                            className="collapse navbar-collapse"
+                        >
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item active">
+                                    <Link
+                                        className="nav-link px-4"
+                                        to="home-section"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                    >
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link
+                                        className="nav-link px-4"
+                                        to="about-section"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                    >
+                                        About Us
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link
+                                        className="nav-link px-4"
+                                        to="services-section"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                    >
+                                        Services
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link
+                                        className="nav-link px-4"
+                                        to="contact-section"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                    >
+                                        Contact
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="menu-open" onClick={() => setSidebar(true)}>
+                            <FaBars
+                                className={`${scrollPosition > 50
+                                    ? 'active'
+                                    : ''} menu-open-logo h3`}
+                            />
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div
+                id={`collapsable-navbar`}
+                className={`${sidebar ? 'open' : ''}`}
+            >
+                <ul>
+                    <li>
+                        <FaTimesCircle
+                            className="h3"
+                            onClick={() => setSidebar(false)}
+                        />
+                    </li>
+                    <li>
+                        <Link
+                            className="h3"
+                            to="home-section"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="h3"
+                            to="about-section"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
+                            About Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="h3"
+                            to="services-section"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="h3"
+                            to="contact-section"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
 };
 
 export default Navbar;
