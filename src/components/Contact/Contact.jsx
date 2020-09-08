@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
 import { FaMap, FaPhone, FaEnvelope } from 'react-icons/fa';
+import * as emailjs from 'emailjs-com';
 
 const Contact = ({ contactRef }) => {
     const [ contactForm, setContactForm ] = useState({
@@ -14,6 +14,18 @@ const Contact = ({ contactRef }) => {
         setContactForm({
             ...contactForm,
             [event.target.name]: event.target.value
+        });
+    };
+
+    emailjs.init('user_0SCAtdThM1Wlm28DDifYm');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        emailjs.send('emailexpendable4', 'template_yg72hhv', {
+            subject : contactForm.subject,
+            email   : contactForm.email,
+            name    : contactForm.name,
+            message : contactForm.message
         });
     };
 
@@ -62,12 +74,7 @@ const Contact = ({ contactRef }) => {
                 </div>
                 <div className="row">
                     <div className="col-md-12 mb-5">
-                        <form
-                            className="p-5 bg-white"
-                            nethod="post"
-                            action="contact.php"
-                            encType="multipart/form-data"
-                        >
+                        <form className="p-5 bg-white" onSubmit={handleSubmit}>
                             <h2 className="h4 text-black mb-5">Contact Form</h2>
 
                             <div className="row form-group">
