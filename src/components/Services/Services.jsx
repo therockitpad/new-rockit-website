@@ -38,7 +38,7 @@ const content = [
     }
 ];
 
-const Services = ({ servicesRef }) => {
+const Services = () => {
     const [ index, setIndex ] = useState(0);
 
     const handleSelect = (selectIndex, e) => {
@@ -58,12 +58,7 @@ const Services = ({ servicesRef }) => {
     };
 
     return (
-        <section
-            id="services-section"
-            data-aos="fade-up"
-            data-aos-delay="100"
-            ref={servicesRef}
-        >
+        <section id="services-section" data-aos="fade-up" data-aos-delay="100">
             <div className="col-12 text-center mb-5">
                 <h2 className="mb-3 h1 text-primary">Services</h2>
                 <h4 className="lead">See what RockIT can do for you!</h4>

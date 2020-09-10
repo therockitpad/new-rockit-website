@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaMap, FaPhone, FaEnvelope } from 'react-icons/fa';
 import * as emailjs from 'emailjs-com';
 
-const Contact = ({ contactRef }) => {
+const Contact = () => {
     const [ contactForm, setContactForm ] = useState({
         name    : '',
         email   : '',
@@ -35,7 +35,6 @@ const Contact = ({ contactRef }) => {
             id="contact-section"
             data-aos="fade-up"
             data-aos-delay="100"
-            ref={contactRef}
         >
             <div className="container">
                 <div className="row my-5 pt-3">

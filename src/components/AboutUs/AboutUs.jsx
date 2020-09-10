@@ -4,14 +4,9 @@ import { ImCheckmark } from 'react-icons/im';
 import aboutUsImage from './images/about-us.jpg';
 import './AboutUs.css';
 
-const AboutUs = ({ aboutUsRef }) => {
+const AboutUs = () => {
     return (
-        <section
-            id="about-section"
-            data-aos="fade-up"
-            data-aos-delay="100"
-            ref={aboutUsRef}
-        >
+        <section id="about-section" data-aos="fade-up" data-aos-delay="100">
             <div className="container">
                 <div className="row mb-5">
                     <div className="col-12 text-center">

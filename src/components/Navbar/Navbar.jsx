@@ -47,6 +47,7 @@ const Navbar = () => {
                                         spy={true}
                                         smooth={true}
                                         duration={500}
+                                        offset={-200}
                                     >
                                         Home
                                     </Link>
@@ -58,6 +59,7 @@ const Navbar = () => {
                                         spy={true}
                                         smooth={true}
                                         duration={500}
+                                        offset={-200}
                                     >
                                         About Us
                                     </Link>
@@ -69,6 +71,7 @@ const Navbar = () => {
                                         spy={true}
                                         smooth={true}
                                         duration={500}
+                                        offset={-200}
                                     >
                                         Services
                                     </Link>
@@ -80,6 +83,7 @@ const Navbar = () => {
                                         spy={true}
                                         smooth={true}
                                         duration={500}
+                                        offset={-200}
                                     >
                                         Contact
                                     </Link>
@@ -125,6 +129,7 @@ const Navbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            offset={-150}
                         >
                             About Us
                         </Link>
@@ -136,6 +141,7 @@ const Navbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            offset={-150}
                         >
                             Services
                         </Link>
@@ -147,6 +153,7 @@ const Navbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            offset={-150}
                         >
                             Contact
                         </Link>
