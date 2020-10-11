@@ -7,6 +7,7 @@ import './AboutUs.css';
 const AboutUs = () => {
     return (
         <section id="about-section" data-aos="fade-up" data-aos-delay="100">
+            <div className="spacing-div" />
             <div className="container">
                 <div className="row mb-5">
                     <div className="col-12 text-center">

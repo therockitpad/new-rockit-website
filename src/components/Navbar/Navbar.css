@@ -1,6 +1,6 @@
 .navbar {
     transition: all 0.4s;
-    height: 6rem;
+    height: 4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -80,6 +80,10 @@
 
 #collapsable-navbar ul li > a {
     color: black;
+}
+
+.spacing-div {
+    min-height: 8rem;
 }
 
 /* Change navbar styling on small viewports */

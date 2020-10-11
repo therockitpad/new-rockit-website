@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaMap, FaPhone, FaEnvelope } from 'react-icons/fa';
 import * as emailjs from 'emailjs-com';
 
+import './Contact.css';
+
 const Contact = () => {
     const [ contactForm, setContactForm ] = useState({
         name    : '',
@@ -36,8 +38,9 @@ const Contact = () => {
             data-aos="fade-up"
             data-aos-delay="100"
         >
+            <div className="spacing-div" />
             <div className="container">
-                <div className="row my-5 pt-3">
+                <div className="row mb-5 ">
                     <div className="col-12 text-center">
                         <h2 className="section-title h1 text-primary mb-3">
                             Contact Us

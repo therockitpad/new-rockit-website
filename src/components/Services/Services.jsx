@@ -59,6 +59,7 @@ const Services = () => {
 
     return (
         <section id="services-section" data-aos="fade-up" data-aos-delay="100">
+            <div className="spacing-div" />
             <div className="col-12 text-center mb-5">
                 <h2 className="mb-3 h1 text-primary">Services</h2>
                 <h4 className="lead">See what RockIT can do for you!</h4>
