@@ -69,7 +69,7 @@ const Contact = () => {
                                 href="mailto:nitinkumar@rockitpad.com"
                                 className="text-dark"
                             >
-                                nitinkumar@rockitpad.com
+                                therockitpad07@gmail.com
                             </a>
                         </p>
                     </div>
