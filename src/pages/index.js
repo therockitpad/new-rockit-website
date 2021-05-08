@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
-
 import Navbar from '../components/Navbar/Navbar';
 import AboutUs from '../components/AboutUs/AboutUs';
 import Cover from '../components/Cover/Cover';
